@@ -77,8 +77,25 @@ window.loadchart = function (json) {
   
           
   });
+//transform chart api
+window.transformChart=function(type){
+  chart.transform(type);
+  
 };
 
-function sum(a, b) {
-  return a+b;
+
+window.reloadData=function(data){
+  const columns=JSON.parse(data);
+  chart.load({
+    columns: columns,
+  })
 };
+
+window.groupData=function(data){
+  
+  const groups=JSON.parse(data);
+  console.log(groups);
+  chart.groups(groups);
+
+}
+}
