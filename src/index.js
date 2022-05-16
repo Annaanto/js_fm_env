@@ -84,6 +84,7 @@ window.transformChart=function(type){
 };
 
 
+
 window.reloadData=function(data){
   const columns=JSON.parse(data);
   chart.load({
