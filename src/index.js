@@ -31,14 +31,16 @@ window.loadchart = function (json) {
     },
 
     data: {
-      onclick: function (clickedData) { 
+      onclick: function (clickedData,element) { 
+        console.clear;
         alert("hi");
         console.log(clickedData);
-        const {id, index}=clickedData;
-        console.log(id,index);
+        console.log(element);
+        const {id, index, value}=clickedData;
+        console.log(id,index,value);
         const month=months[index];
-        console.log(id,index,month);
-        const object={id,month};
+        //console.log(id,index,month);
+        const object={id,month,value};
         //const obj={id: clickedData.id, month: months[clickedData.index]};
         
         console.log(object);
@@ -82,6 +84,7 @@ window.transformChart=function(type){
   chart.transform(type);
   
 };
+
 
 
 
